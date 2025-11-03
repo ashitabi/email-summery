@@ -1,0 +1,143 @@
+.thread-detail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.thread-detail-header {
+  padding: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.thread-info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.thread-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.thread-meta .separator {
+  color: #d1d5db;
+}
+
+.thread-meta .order-id {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.thread-detail-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.thread-messages,
+.thread-summary {
+  background: white;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.thread-messages h3,
+.thread-summary h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  padding: 1.5rem 1.5rem 1rem;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.messages-container {
+  padding: 1rem;
+  flex: 1;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.message-customer {
+  background: #f0fdf4;
+  border-left: 3px solid #10b981;
+}
+
+.message-company {
+  background: #eff6ff;
+  border-left: 3px solid #3b82f6;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.sender {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.message-body {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.summary-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: #9ca3af;
+}
+
+.placeholder-content svg {
+  margin-bottom: 1rem;
+  color: #d1d5db;
+}
+
+.placeholder-content h3 {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.placeholder-content p {
+  font-size: 0.9rem;
+}
