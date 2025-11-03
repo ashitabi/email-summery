@@ -217,108 +217,14 @@ ce-email-summarizer/
 - **Simplicity**: Easy to understand and modify
 - **Production-Ready**: No build-time concerns with CSS-in-JS libraries
 
-### Mock Data Strategy
-- **Rapid Prototyping**: Demonstrates full workflow without backend dependency
-- **Realistic**: Uses actual noisy data from provided dataset
-- **Easy Integration**: Drop-in replacement with API calls when backend is ready
-
-## Scaling Plan
-
-### Phase 1: MVP (Current)
-- Frontend wireframe with mock data
-- Basic workflow demonstration
-
-### Phase 2: Backend Integration
-- FastAPI REST API
-- LLM integration (GPT-4/Claude)
-- Real-time summarization
-
-### Phase 3: Production Ready
-- Database (PostgreSQL)
-- Caching layer (Redis)
-- Rate limiting and queue management
-- Error handling and retry logic
-
-### Phase 4: Advanced Features
-- Batch processing pipeline
-- Custom fine-tuned models
-- Multi-language support
-- Analytics and insights
-
-### Infrastructure Considerations
-- **Horizontal Scaling**: Stateless API design allows multiple instances
-- **Database**: Read replicas for thread retrieval, write leader for updates
-- **Caching**: Redis for frequently accessed summaries (60% reduction in DB queries)
-- **Queue**: Celery/RabbitMQ for async summarization of large batches
-- **Monitoring**: Prometheus + Grafana for performance metrics
-
-## Business Impact
-
-### Time Savings
-- **Before**: 5 minutes per thread review (manual reading + summarization)
-- **After**: 1 minute per thread review (AI summary + quick verification)
-- **Improvement**: 80% time reduction
-
-### ROI Calculation
-```
-Assumptions:
-- 100 threads/day
-- 5 minutes → 1 minute per thread
-- 4 minutes saved per thread
-
-Daily Savings: 100 threads × 4 min = 400 minutes = 6.7 hours
-Weekly Savings: 6.7 hours × 5 days = 33.5 hours
-Annual Savings: 33.5 hours × 52 weeks = 1,742 hours ≈ 0.84 FTE
-
-Cost Savings (at $50k/year salary): ~$42,000/year
-```
-
-### Additional Benefits
-- **CSAT Improvement**: Faster response times and consistent quality
-- **Reduced Errors**: AI catches key details humans might miss
-- **Scalability**: Handle peak volumes without additional headcount
-
-## Development Timeline
-
-- ✅ **Hour 1**: Requirements analysis and project setup
-- ✅ **Hour 2**: Frontend component architecture and wireframes
-- ✅ **Hour 3**: Styling and UX polish
-- 🔄 **Hour 4**: Backend API and LLM integration (next)
-- 📋 **Hour 5**: Testing, documentation, and demo prep
-
-## Known Limitations
-
-1. **Mock Data**: Current version uses predefined summaries, not real AI
-2. **No Persistence**: Data resets on page reload
-3. **No Backend**: All logic runs in the browser
-4. **Single User**: No collaboration features
-
-## Future Enhancements
-
-- [ ] Connect to real LLM API (GPT-4/Claude)
-- [ ] Add prompt engineering interface
-- [ ] Implement feedback loop for model improvement
-- [ ] A/B testing framework for prompt variations
-- [ ] Sentiment analysis visualization
-- [ ] Export summaries in multiple formats (JSON, CSV, PDF)
-
-## Contributing
-
-This is a prototype for demonstration purposes. For production deployment:
-1. Add environment variable management (.env)
-2. Implement authentication/authorization
-3. Add comprehensive error handling
-4. Write unit and integration tests
-5. Set up CI/CD pipeline
-
-## License
-
-Proprietary - Created for SDM Customer Experience Assessment
-
-## Contact
-
-For questions or feedback about this prototype, please reach out to the development team.
+### Why FastAPI + Hugging Face?
+- **No API Keys Required**: Self-hosted Transformers model
+- **Cost Effective**: Zero per-request costs
+- **Fast**: Async support for high throughput
+- **Type Safe**: Pydantic validation prevents errors
 
 ---
 
-**Note**: This is a working prototype demonstrating the core workflow. The mock summarization will be replaced with real AI integration in the next phase.
+## License
+
+MIT License - Feel free to use and modify for your own projects.
